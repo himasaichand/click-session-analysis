@@ -37,6 +37,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.scalatest</groupId>
+			<artifactId>scalatest_2.13.0-M5</artifactId>
+			<version>3.0.7</version>
+			<scope>test</scope>
+		</dependency>
 
 
 
