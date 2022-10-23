@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean
 class TimeAppMapper {
 
   @Bean
-  def mapper : ObjectMapper = {
+  def mapper: ObjectMapper = {
     JsonMapper.builder()
       .addModule(DefaultScalaModule)
       .build()

@@ -1,8 +1,9 @@
-import org.scalatest.{FlatSpec, Matchers, TryValues}
-import  com.hima.humanFriendlyTransformation
-import com.hima.Main
+import com.hima.{Main, humanFriendlyTransformation}
+import org.scalatest.TryValues
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class ClockTest extends FlatSpec with Matchers with TryValues {
+class ClockTest extends AnyFlatSpec with Matchers with TryValues {
 
   val hft= new humanFriendlyTransformation
 
