@@ -8,7 +8,6 @@ object RemoveDuplicates extends App {
     .getLines().drop(1)
     .foldLeft(Set.empty[String]) {
       case (seen, str) =>
-        println("seen =>" + seen + "  str ==>" + str)
         val substr = str.take(str.lastIndexOf(","))
         if (!seen(substr)) println(str)
         seen + substr

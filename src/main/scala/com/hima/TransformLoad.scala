@@ -18,7 +18,7 @@ class TransformLoad {
 
     val sessList = tsList.foldLeft((List[String](), 0d, 0d)) { case ((ls, j, k), i) =>
       if (i == 0 || j + i >= tmo) {
-       // println("j value in first loop -->" + j + "i value =>" + i)
+        // println("j value in first loop -->" + j + "i value =>" + i)
         (sid(k + 1) :: ls, 0d, k + 1)
       }
       else {
@@ -56,8 +56,7 @@ class TransformLoad {
 
   finalDf.show(false)
 
-  // finalDf.save
-  //clickstreamDF.write.mode(SaveMode.Append).parquet("out.parquet")
+   /** *****************results in parquet with enriched data***************************/
   finalDf.write.mode("overwrite").parquet("src/main/resources/output.parquet")
 
   finalDf.createOrReplaceTempView("session_info")
